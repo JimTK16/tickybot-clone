@@ -67,12 +67,11 @@ body {
 }
 
 .content-wrapper-header h1 {
-  /* opacity: 0; */
   font-size: 8rem;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.6);
   letter-spacing: -0.05em;
-  animation: fadeIn 0.6s ease-in-out forwards;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .ticky-bold {
@@ -81,11 +80,10 @@ body {
 }
 
 .content-wrapper-header p {
-  /* opacity: 0; */
   color: white;
   font-size: 2.6rem;
   font-weight: 300;
-  animation: fadeIn 0.6s 0.6s ease-in-out forwards;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .btn {
@@ -98,7 +96,7 @@ body {
   border: 2px solid black;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: all 0.8s;
+  transition: transform 0.8s;
 }
 
 .btn:hover {
@@ -116,14 +114,12 @@ body {
 }
 
 .btn-light {
-  animation: fadeIn 0.8s 1s ease-in-out both;
-
-  /* opacity: 0; */
+  animation: fadeIn 3s ease-in-out;
   margin-block: 4rem;
 }
 
 .btn-light:hover {
-  animation: scaleDown 0.8s ease both;
+  transform: scale(0.95);
 }
 
 .btn-light a {
@@ -132,11 +128,10 @@ body {
 }
 
 .robot-img {
-  opacity: 0;
   max-width: 30rem;
   flex-basis: 50%;
   margin: auto;
-  animation: fadeIn 0.8s 1.2s ease-in-out forwards;
+  animation: fadeIn 4s ease-in-out;
 }
 
 .section-about {
@@ -254,6 +249,11 @@ body {
   border-radius: 0.4rem;
 }
 
+.btn-to-top img {
+  width: 2.4rem;
+  height: auto;
+}
+
 .footer {
   background-color: #40596b;
   font-size: 1.3rem;
@@ -279,18 +279,16 @@ body {
 
 @keyframes fadeIn {
   0% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  20% {
     opacity: 0;
-    transform: translateY(-10px);
   }
 
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes scaleDown {
-  100% {
-    transform: scale(0.95);
   }
 }
